@@ -10,6 +10,8 @@ This was a first year project in my computer architecture module.
 
 
 ## Editor controls and flags
+
+```
 /******************************************************************************
 *                                  Editor                                     *
 ******************************************************************************/
@@ -36,4 +38,7 @@ flag                       meaning
 --help                     view this file
 --append <filname> string  append a string to filename.txt
 --log <filename>           view the change log of filename.txt
+
+```
+
 
