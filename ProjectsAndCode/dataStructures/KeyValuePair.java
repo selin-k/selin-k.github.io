@@ -1,4 +1,3 @@
-package uk.ac.warwick.cs126.structures;
 
 /**
  * Structure used to keep a pair of comparable key value
