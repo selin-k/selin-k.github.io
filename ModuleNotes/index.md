@@ -9,3 +9,4 @@ layout: default
 ## [cs132 - computer architecture](132.md)
 ## [cs140 - computer security](140.md)
 ## [cs141 - functional programming](141.md)
+## [cs133 - lab diary](https://www.dcs.warwick.ac.uk/~u2006384/cs133/)
