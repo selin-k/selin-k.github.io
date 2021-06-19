@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Module Notes
+title: module notes
 ---
 
-# Module Notes
+# module notes
 
-## [CS118 - Intro to programming (Java)](118.md) 
-## [CS126 - Algorithms and Data Structures](126.md)
-## [CS132 - Computer Architecture](132.md)
-## [CS140 - Computer Security](140.md)
-## [CS141 - Functional Programming](141.md)
+## [cs118 - intro to programming (java)](118.md) 
+## [cs126 - algorithms and data structures](126.md)
+## [cs132 - computer architecture](132.md)
+## [cs140 - computer security](140.md)
+## [cs141 - functional programming](141.md)
