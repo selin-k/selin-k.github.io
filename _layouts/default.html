@@ -1,16 +1,24 @@
-<!-- <!doctype html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
+    {%- if page.math == true -%}
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    {%- endif -%}
     <title>{{ page.title }}</title>
   </head>
   <body>
     {{ content }}
+<!--     <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+      </footer> -->
   </body>
-</html> -->
+</html>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
 
@@ -68,3 +76,4 @@
   </body>
 </html>
 
+ -->
