@@ -1,5 +1,5 @@
 /**
-* A generic implementation of the IList iterface.
+* A generic set.
 */
 public class Set<E> {
     
