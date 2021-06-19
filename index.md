@@ -7,6 +7,7 @@ title: selin kayay
 ### [module notes](ModuleNotes/)
 ### [personal notes](PersonalNotes/)
 ### [mini projects//code](ProjectsAndCode/)
+### [articles and (research?)](articles/)
 
 
 
