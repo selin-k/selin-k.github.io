@@ -8,6 +8,9 @@ This editor, like many-other UNIX command-line editors, provides a command-line 
 - Creates log files for each file edited and saved with the editor, accessible through command line flags.
 - Additionally, provides a spelling check feature where misspellings are highlighted on the user-interface when the user presses `ctrl-f`.
 
+**High level design**
+![Design of editor.](https://github.com/selin-k/selin-k.github.io/blob/main/ProjectsAndCode/media/design.PNG)
+
 [View on GitHub](https://github.com/selin-k/selin-k.github.io/tree/main/ProjectsAndCode/commandLineEditor)
 
 ## Execution
