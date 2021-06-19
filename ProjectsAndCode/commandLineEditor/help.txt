@@ -1,0 +1,26 @@
+/******************************************************************************
+*                                  Editor                                     *
+******************************************************************************/
+
+CONTROLS
+-------------------------------------------------------------------------------
+
+Key                        meaning
+ctrl-q                     quit
+ctrl-x                     help message
+ctrl-s                     save buffer
+ctrl-k                     delete line
+ctrl-h                     delete a characters
+ctrl-f                     spell checker
+ctrl-c                     copy file
+ctrl-d                     delete file
+
+
+
+COMMAND LINE FLAGS 
+-------------------------------------------------------------------------------
+
+flag                       meaning
+--help                     view this file
+--append <filname> string  append a string to filename.txt
+--log <filename>           view the change log of filename.txt
