@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: home
 title: Module Notes
 math: true
 ---
