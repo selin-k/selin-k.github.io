@@ -1,4 +1,3 @@
-package uk.ac.warwick.cs126.structures;
 
 import java.util.Comparator;
 
