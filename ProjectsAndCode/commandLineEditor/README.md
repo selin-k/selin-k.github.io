@@ -8,6 +8,21 @@ This was a first year project in my computer architecture module.
 > - Creates log files for each file edited and saved with the editor, accessible through command line flags.
 > - Additionally, provides a spelling check feature where misspellings are highlighted on the user-interface when the user presses `ctrl-f`.
 
+## Execution
+
+```
+gcc -o editor editor.c spell.c dictionary.c -std=c99 -std=gnu99
+./editor
+```
+
+**notes:**
+
+`./editor --help` for control and flag information.
+
+`spell.c` has a hardcoded definition that is the path to the "`large.txt`" file.
+This is a dictionary. Please keep it in the same working directory as the editor 
+executable to avoid issues with the spelling checker feature.
+
 
 ## Editor controls and flags
 
