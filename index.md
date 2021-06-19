@@ -5,8 +5,8 @@ title: selin kayay
 # selin kayay
 
 ## notes and projects
-### [Module Notes](ModuleNotes/)
-### [Personal Notes](PersonalNotes/)
+### [module notes](ModuleNotes/)
+### [personal notes](PersonalNotes/)
 
 
 
