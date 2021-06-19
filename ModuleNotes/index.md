@@ -1,7 +1,6 @@
 ---
 layout: home
 title: Module Notes
-math: true
 ---
 
 # Module Notes
