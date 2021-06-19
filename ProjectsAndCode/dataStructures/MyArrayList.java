@@ -1,17 +1,8 @@
-package uk.ac.warwick.cs126.structures;
 
 import java.util.Arrays;
 import java.util.Iterator;
 
-/**
- * This class is kept as it was implemented when it 
- * came along with the coursework.
- * 
- * Only it now implements Iterator and has a 
- * toArray method.
- * 
- * @version 1.1
- */
+
 public class MyArrayList<E> implements Iterable<E>{
 
     private Object[] array;
