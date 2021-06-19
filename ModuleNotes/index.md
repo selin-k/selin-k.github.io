@@ -1,7 +1,7 @@
 ---
 layout: notes
 title: Module Notes
-description: Links to notes takes for most of the modules for year 1.
+math: true
 ---
 
 # Module Notes
