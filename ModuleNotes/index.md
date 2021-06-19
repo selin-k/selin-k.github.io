@@ -1,6 +1,8 @@
+---
 layout: modhome
 title: Module Notes
 description: Links to notes takes for most of the modules (except the maths ones since typing them up would be painful)
+---
 
 # Module Notes
 
