@@ -5,7 +5,6 @@ public class Set<E> {
     
     private MyArrayList<E> array = new MyArrayList<>();
 
-    // DONE...
     public boolean add(E element) {
         // Adds element to the list when it does not already exist.
         // Returns true on success and false otherwise.
@@ -17,7 +16,6 @@ public class Set<E> {
         return false;
     }
     
-    // DONE...
     public String toString() {
         // Returns a string representation of this Set object.
         // I printed the entire array instead of line by line
