@@ -1,6 +1,7 @@
 ---
+layout: modnotes
 title: Module Notes
-description: Links to notes takes for most of the modules (except the maths ones since typing them up would be painful)
+description: Links to notes takes for most of the modules for year 1.
 ---
 
 # Module Notes
