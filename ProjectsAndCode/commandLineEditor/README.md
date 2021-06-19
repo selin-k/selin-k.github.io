@@ -56,4 +56,4 @@ flag                       meaning
 
 ```
 
-
+This editor indeed was heavily inspired by the `kilo` editor and that has been referenced in my documentation.
