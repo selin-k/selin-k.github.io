@@ -1,4 +1,7 @@
-
+---
+layout: default
+title: selin kayay
+---
 
 # Selin Kayay
 
