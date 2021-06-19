@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+    <meta charset="UTF-8">
+    {%- if page.math == true or layout.math == true -%}
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    {%- endif -%}
+    <!-- Include tocNAV javascript -->
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/tocNav.js"></script>
+
+    <!-- seo used to be here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
+        type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <title>
+        {%- if page.layout != "combined" -%}
+            {{ page.layout }} {{ page.title }}
+        {%- else -%}
+            {{ page.title | default: site.title }}
+        {%- endif -%}
+    </title>
+</head>
+
+<body>
+    <div id="mainGrid" class="container">
+        <header style="padding:10px;" class="page-header notes-header" role="banner">
+            <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+            {%- if page.description -%}
+            <h2 class="project-tagline">{{ page.description }}</h2>
+            {%- endif -%}
+            {% if site.show_downloads %}
+            <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+            <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+            {% endif %}
+        </header>
+        <div title="Table of Contents" class="buttonCol" onclick="toggleNav()">
+            <div class="navArrow">
+                <i></i>
+            </div>
+        </div>
+        <div class="navBox">
+            <div id="sidenav" class="sideNav closedNav">
+                <h2 style="margin-left: 10px;">Table of Contents</h2>                
+                {%- include toc.html html=content sanitize=true class="table-of-contents" -%}
+            </div>
+        </div>
+        
+        <div class="contents">
+            <main id="content" class="main-content" role="main">
+                <div class="partNav">
+                    {%- if page.part == true -%}
+                        {%- if page.previous.part == true -%}
+                            {% capture previous %}{{ page.previous.url }}{% endcapture %}
+                            {%- capture ptitle -%}{{ page.previous.title }}{%- endcapture -%}
+                        {%- endif -%}
+                        {%- if page.next.part == true -%}
+                            {% capture next %}{{ page.next.url }}{% endcapture %}
+                            {%- capture ntitle -%}{{ page.next.title }}{%- endcapture -%}
+                        {%- endif -%}
+                        {%- capture mod -%}{{ page.layout | default: "null"}}{%- endcapture -%}
+
+                        {% include partnav.html nex=next pre=previous mod=mod ptitle=ptitle ntitle=ntitle %}
+                    {%- else -%}
+                    {%- capture mod -%}{{ page.mod | default: "Module Home"}}{%- endcapture -%}
+                    <a href="./">🏡{{ mod }}</a>
+                    {%- endif -%}
+                </div>
+                <!-- Main Content of markdown or sub-layouts-->
+                {{ content }}
+                
+                <footer class="site-footer">
+                    {% if site.github.is_project_page %}
+                    <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name
+                            }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name
+                            }}</a>.</span>
+                    {% endif %}
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
