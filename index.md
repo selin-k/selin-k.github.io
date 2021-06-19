@@ -2,8 +2,9 @@
 layout: default
 title: selin kayay
 ---
+# selin kayay
 
-## Notes and Projects
+## notes and projects
 ### [Module Notes](ModuleNotes/)
 ### [Personal Notes](PersonalNotes/)
 
