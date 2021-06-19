@@ -77,8 +77,8 @@
 
                         {% include partnav.html nex=next pre=previous mod=mod ptitle=ptitle ntitle=ntitle %}
                     {%- else -%}
-                    {%- capture mod -%}{{ page.mod | default: "Module Home"}}{%- endcapture -%}
-                    <a href="./">🏡{{ mod }}</a>
+                    {%- capture mod -%}{{ page.mod | default: "Home"}}{%- endcapture -%}
+                    <a href="./">{{ mod }}</a>
                     {%- endif -%}
                 </div>
                 <!-- Main Content of markdown or sub-layouts-->
