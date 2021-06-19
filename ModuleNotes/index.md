@@ -1,3 +1,7 @@
+layout: modhome
+title: Module Notes
+description: Links to notes takes for most of the modules (except the maths ones since typing them up would be painful)
+
 # Module Notes
 
 ## [CS118 - Intro to programming (Java)](118.md) 
