@@ -24,7 +24,7 @@ The railway is ideally engineered for wheeled locomotion because rolling frictio
 - Kinematics is the most basic study of how mechanical systems behave.
 -  In mobile robotics, we need to understand the mechanical behavior of the robot both in order to design appropriate mobile robots for tasks and to understand how to create control software for an instance of mobile robot hardware.
 
-> Since a mobile robot is a self-contsined automaton that can move with respect to its environment, unlike manipulators such as fixed arms, position estimation is difficult.
+> Since a mobile robot is a self-contained automaton that can move with respect to its environment, unlike manipulators such as fixed arms, position estimation is difficult.
 
 Deriving a model for the whole robot’s motion is a bottom-up process. Each individual wheel contributes to the robot’s motion and, at the same time, imposes constraints on robot
 motion.
@@ -67,19 +67,48 @@ Navigation is one of the most challenging competences required of a mobile robot
 
 > Localization has recieved relatively greater attention and advances have been made in the past decade. 
 
-**why must the robot determine its location?**
-...
+![Mobile robot localization](https://github.com/selin-k/selin-k.github.io/blob/main/PersonalNotes/media/localization.png?raw=true)
+
+**effector vs actuator**
+An effector is any device that affects the environment. Robots control their effectors, which are also known as end effectors. Effectors include legs, wheels, arms, fingers, wings and fins. Controllers cause the effectors to produce desired effects on the environment.
+An actuator is the actual mechanism that enables the effector to execute an action. Actuators typically include electric motors, hydraulic or pneumatic cylinders, etc. The terms effector and actuator are often used interchangeably to mean "whatever makes the robot take an action." - which is actually incorrect to do.
+
+ie.
+Two basic ways of using effectors:
+- to move the robot around => locomotion
+- to move other object around => manipulation
+
 
 **Successful localization methodologies of recent years**
-...
 
 **how sensor and effector uncertainty is responsible for difficulties of localization**
-...
+- While GPS alleviates much of the localization problem there are still issues with limited network space (indoors/obstructed areas) and accuracy is within several meters hence unnacceptable for localizing human-scale mobile robots.
+- Additionally, we might need to look beyond the robot's absolute position in Earth's reference frame (perhaps relative position with respect to some target).
+- Sensors are the fundamental robot input for the process of perception, and therefore the degree to which sensors can discriminate the world state is critical. Sensor noise induces a limitation on the consistency of sensor readings in the same environmental state and, therefore, on the number of useful bits available from each sensor reading. Often, the source of sensor noise problems is that some environmental features are not captured by the robot’s representation and are thus overlooked.
+  - For instance, consider the noise level (i.e., apparent random error) of ultrasonic range-measuring sensors (e.g., sonars). When a sonar transducer emits sound toward a           relatively smooth and angled surface, much of the signal will coherently reflect away, failing to generate a return echo.
+
+
+**why must the robot determine its location?**
+Localization may be mandatory in order to successfully navigate between waypoints and reach targets; the robot must have a way of detecting the goal location relative to itself.
+
 
 **dealing with the challange of robot localization**
-- avoiding it. then, why is it a part of navigation altogether? OR are there cases where we can maybe live without it?
-- explicit map-based localization.
-...
+- behavior-based localization:
+  - since sensors and effectors are noisy and information-limited, one should avoid creating a geometric map for localization.
+  - instead we devise a set of behaviors that result in the desired robot motion without explicit reasoning about location/position and avoid path planning.
+  - ie. following the left wall until we get to goal.
+  - this is not scalable to larger environments, often heavily depends on specific robot hardware and environmental characteristics, there may also be multiple active behaviors    at a time which could backfire the performance optimization.
+- explicit map-based localization:
+  - attempts to map explicit location using sensor data, updating belief of location against map of the environment.
+  - makes the system’s belief about position transparently available to the human operators.
+  - The existence of the map itself represents a medium for communication between human and robot: the human can simply give the robot a new map if the robot goes to a new environment; hence scalable.
+  - the internal map representation is constructed and trusted by the robot, if the model diverges from reality so will the behavior of the robot
+   
+
+The map-based approach will require more up-front development effort to create a navigating mobile robot. The hope is that the development effort results in an architecture that can successfully map and navigate a variety of environments, thereby amortizing the up-front design cost over time.
+
+![Mapping techniques.](https://github.com/selin-k/selin-k.github.io/blob/main/PersonalNotes/media/localizationtech.png?raw=true)
+
 
 **Successful localization systems and qualifying techniques**
 ...
