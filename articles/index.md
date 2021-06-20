@@ -7,3 +7,6 @@ title: articles and research
 ### [An overlook of cyberattacks against neural networks](https://medium.com/analytics-vidhya/an-overlook-of-cyberattacks-against-neural-networks-e221b7cff3fd)
 ### [Exploring roboethics: Why don’t the three laws of Robotics work in real life?](https://medium.com/@selin2ky/exploring-roboethics-why-dont-the-three-laws-of-robotics-work-in-real-life-aa92cc311e75)
 ### [An Overview of the Impact of Autonomous Delivery Robots on the Workforce](https://github.com/selin-k/selin-k.github.io/blob/main/ProjectsAndCode/An_Overview_of_the_Impact_of_Autonomous_Delivery_Robots_on_the_Workforce.pdf)
+
+
+<a href="selin-k.github.io/blob/main/ProjectsAndCode/An_Overview_of_the_Impact_of_Autonomous_Delivery_Robots_on_the_Workforce.pdf" target="_blank">PDF.</a>
