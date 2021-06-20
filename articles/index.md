@@ -9,4 +9,5 @@ title: articles and research
 ### [An Overview of the Impact of Autonomous Delivery Robots on the Workforce](https://github.com/selin-k/selin-k.github.io/blob/main/ProjectsAndCode/An_Overview_of_the_Impact_of_Autonomous_Delivery_Robots_on_the_Workforce.pdf)
 
 
-<a href="selin-k.github.io/blob/main/ProjectsAndCode/An_Overview_of_the_Impact_of_Autonomous_Delivery_Robots_on_the_Workforce.pdf" target="_blank">PDF.</a>
+
+<embed src="https://github.com/selin-k/selin-k.github.io/blob/main/ProjectsAndCode/An_Overview_of_the_Impact_of_Autonomous_Delivery_Robots_on_the_Workforce.pdf" type="application/pdf" />
