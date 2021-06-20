@@ -54,4 +54,58 @@ active sensors include wheel quadrature encoders, ultrasonic (distance?) sensors
 
 ![Sensors in mobile robotics](https://github.com/selin-k/selin-k.github.io/blob/main/PersonalNotes/media/sensors.png?raw=true)
 
+> Characterizing sensor errors in a challange in mobile robotics.
+
+
+### Localization
+
+Navigation is one of the most challenging competences required of a mobile robot. Success in navigation requires success at the four building blocks of navigation: 
+- **perception**, the robot must interpret its sensors to extract meaningful data.
+- **localization**, the robot must determine its position in the environment.
+- **cognition**, the robot must decide how to act to achieve its goals.
+- **motion control**, the robot must modulate its motor outputs to achieve the desired trajectory.
+
+> Localization has recieved relatively greater attention and advances have been made in the past decade. 
+
+**why must the robot determine its location?**
+...
+
+**Successful localization methodologies of recent years**
+...
+
+**how sensor and effector uncertainty is responsible for difficulties of localization**
+...
+
+**dealing with the challange of robot localization**
+- avoiding it. then, why is it a part of navigation altogether? OR are there cases where we can maybe live without it?
+- explicit map-based localization.
+...
+
+**Successful localization systems and qualifying techniques**
+...
+
+
+### Cognition and Planning
+
+Cognition generally represents the purposeful decision-making and execution that a system utilizes to achieve its highest-order goals.
+
+
+**navigation competence**
+Given partial knowledge about its environment and a goal position or series of positions, navigation encompasses the ability of the robot to act based on its knowledge and sensor values so as to reach its goal positions as efficiently and as reliably as possible.
+
+**Aim: How can we utilize the tools discussed above to solve the problem of navigation and decision making?**
+
+There are two notable competences required for mobile robot navigation:
+1. Given a map and a goal waypoint, the robot must be capable of path planning such that a trajectory is identified which will reach the robot to the goal when executed. This could be the usage of a Global Positioning System (GPS) and some path finding algorithm.
+2. Given real time sensor readings about the environment of the robot, as the robot executes the planned path to reach its goal is must be capable of improvising and modulating the trajectory to avoid collisions or harmful situations (to the mission) such as unexpected dead ends.
+
+
+---
+
+- note to self: disover answers to the localization questions above and see current industry solutions
+- discover path planning and object avoidance solutions and some currently used solutions too.
+
+
+
+
 
