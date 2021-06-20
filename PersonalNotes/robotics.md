@@ -52,6 +52,6 @@ However, active sensing introduces several risks:
 The outbound energy may affect the very characteristics that the sensor is attempting to measure. Furthermore, an active sensor may suffer from interference between its signal and those beyond its control. For example, signals emitted by other nearby robots, or similar sensors on the same robot, may influence the resulting measurements. Examples of
 active sensors include wheel quadrature encoders, ultrasonic (distance?) sensors, and laser rangefinders.
 
-![Sensors in mobile robotics](https://github.com/selin-k/selin-k.github.io/tree/main/PersonalNotes/media/sensors.png)
+![Sensors in mobile robotics](https://github.com/selin-k/selin-k.github.io/blob/main/PersonalNotes/media/sensors.png?raw=true)
 
 
