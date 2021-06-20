@@ -1,6 +1,6 @@
 ---
 layout: default
-title: personal projects
+title: personal notes
 ---
 
 # personal projects and notes
