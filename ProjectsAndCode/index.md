@@ -4,6 +4,6 @@ title: projects//code
 ---
 
 ### [videogenerators](https://github.com/selin-k/videogenerators)
-### [autonomous drone (attempt)](https://github.com/selin-k/autonomousdrone)
+### [autonomous drone (attempt)](https://github.com/selin-k/autonomousdrone/blob/main/index.md)
 ### [a command line editor in C with various features.](commandLineEditor/)
 ### [data structures from a year 1 module](dataStructures/)
