@@ -56,19 +56,6 @@ active sensors include wheel quadrature encoders, ultrasonic (distance?) sensors
 
 > Characterizing sensor errors in a challange in mobile robotics.
 
-
-### Localization
-
-Navigation is one of the most challenging competences required of a mobile robot. Success in navigation requires success at the four building blocks of navigation: 
-- **perception**, the robot must interpret its sensors to extract meaningful data.
-- **localization**, the robot must determine its position in the environment.
-- **cognition**, the robot must decide how to act to achieve its goals.
-- **motion control**, the robot must modulate its motor outputs to achieve the desired trajectory.
-
-> Localization has recieved relatively greater attention and advances have been made in the past decade. 
-
-![Mobile robot localization](https://github.com/selin-k/selin-k.github.io/blob/main/PersonalNotes/media/localization.png?raw=true)
-
 **effector vs actuator**
 An effector is any device that affects the environment. Robots control their effectors, which are also known as end effectors. Effectors include legs, wheels, arms, fingers, wings and fins. Controllers cause the effectors to produce desired effects on the environment.
 An actuator is the actual mechanism that enables the effector to execute an action. Actuators typically include electric motors, hydraulic or pneumatic cylinders, etc. The terms effector and actuator are often used interchangeably to mean "whatever makes the robot take an action." - which is actually incorrect to do.
@@ -79,17 +66,39 @@ Two basic ways of using effectors:
 - to move other object around => manipulation
 
 
-**Successful localization methodologies of recent years**
+### Localization & Navigation
 
-**how sensor and effector uncertainty is responsible for difficulties of localization**
-- While GPS alleviates much of the localization problem there are still issues with limited network space (indoors/obstructed areas) and accuracy is within several meters hence unnacceptable for localizing human-scale mobile robots.
-- Additionally, we might need to look beyond the robot's absolute position in Earth's reference frame (perhaps relative position with respect to some target).
-- Sensors are the fundamental robot input for the process of perception, and therefore the degree to which sensors can discriminate the world state is critical. Sensor noise induces a limitation on the consistency of sensor readings in the same environmental state and, therefore, on the number of useful bits available from each sensor reading. Often, the source of sensor noise problems is that some environmental features are not captured by the robot’s representation and are thus overlooked.
-  - For instance, consider the noise level (i.e., apparent random error) of ultrasonic range-measuring sensors (e.g., sonars). When a sonar transducer emits sound toward a           relatively smooth and angled surface, much of the signal will coherently reflect away, failing to generate a return echo.
+Navigation is one of the most challenging competences required of a mobile robot. Success in navigation requires success at the four building blocks of navigation: 
+- **perception**, the robot must interpret its sensors to extract meaningful data.
+- **localization**, the robot must determine its position in the environment.
+- **cognition**, the robot must decide how to act to achieve its goals.
+- **motion control**, the robot must modulate its motor outputs to achieve the desired trajectory.
+
+> Localization has recieved relatively greater attention and advances have been made in the past decade. 
 
 
 **why must the robot determine its location?**
 Localization may be mandatory in order to successfully navigate between waypoints and reach targets; the robot must have a way of detecting the goal location relative to itself.
+
+![Mobile robot localization](https://github.com/selin-k/selin-k.github.io/blob/main/PersonalNotes/media/localization.png?raw=true)
+
+**Successful localization methodologies of recent years**
+- [Key techniques to localize](https://www.sciencedirect.com/science/article/pii/S1319157821000550#:~:text=Then%2C%20we%20discuss,position%20the%20robot.)
+  - These are essentially: probabilistic localization strategies, automatic map-based localization (SLAM), RFID based approaches and evolutionary techniques applied to these for optimizing the robot position estimation. 
+- Position tracking with odometry:
+  - In position tracking, the robot’s initial position is known and the objective is to track the robot at each instance of time during its navigation in the environment.      During navigation, the localization algorithm utilizes the robot’s previous position to update its current location. This is possible by continually monitoring the route of the robot. Position tracking utilizes odometry and sensor data. 
+- Relocation in cases of the kidnapped robot problem:
+  - Relocation deals in mobile robot tracking without any information on its initial pose. This signifies that the robot is able to locate itself globally within the environment. In some situations, the robot is tracked at an arbitrary place sometimes during pose tracking or abducted (kidnapped) to an unidentified place. This issue arises in kidnapped robot problem where, the robot knows that it is being kidnapped. Hence, Kidnap recovery is necessary for any autonomous robots. In most of the situations, the current sensor data is utilized in estimating its pose. Basically, the best match between known data and sensor data solves the issue of relocation. An autonomous robot should be able to handle pose monitoring and relocation simultaneously. It should be able to recognize that; it is being kidnapped and it should recover its pose by applying relocation method.
+
+
+> The problem of localization grows in magnitude the more dynamic the environment is. This means, in a static environment, localization is quite simple as the robot is the only moving object. In unfamiliar zones, the robot learns the environment’s map during navigation. This approach is known as simultaneous localization and mapping (SLAM).
+
+
+**how sensor and effector uncertainty is responsible for difficulties of localization**
+- While GPS alleviates much of the localization problem there are still issues with **limited network space** (indoors/obstructed areas) and **accuracy is within several meters** hence unnacceptable for localizing human-scale mobile robots.
+- Additionally, we might need to **look beyond the robot's absolute position** in Earth's reference frame (perhaps relative position with respect to some target).
+- Sensors are the fundamental robot input for the process of perception, and therefore the degree to which sensors can discriminate the world state is critical. **Sensor noise induces a limitation on the consistency of sensor readings** in the same environmental state and, therefore, on the number of useful bits available from each sensor reading. Often, the source of sensor noise problems is that some environmental features are not captured by the robot’s representation and are thus overlooked.
+  - For instance, consider the noise level (i.e., apparent random error) of ultrasonic range-measuring sensors (e.g., sonars). When a sonar transducer emits sound toward a           relatively smooth and angled surface, much of the signal will coherently reflect away, failing to generate a return echo.
 
 
 **dealing with the challange of robot localization**
@@ -111,8 +120,13 @@ The map-based approach will require more up-front development effort to create a
 
 
 **Successful localization systems and qualifying techniques**
-...
+Depending on the robot's use, environment, tasks and expected abilities a specific localization technique can be utilizied. For instance a rover in a static environment like a maze may not even need to be localized and just follow a behavioral localization approach whereas the Amazon scout autonomous delivery robots will need to deliver to waypoints in a dynamic environment that has many unknown variables, the robot may need to use various sensors to localize and simulatenaously map itself to its modelled environment (hence SLAM).
 
+---
+
+Next aspect to think of is how the robot makes decisions during a given mission. Often autonomous robots in dynamic environments will need to somehow modulate some mapped out trajectory to their given goal as events arise during navigation - this means as potential threats and unexcepted events arise the robot must be capable of detecting and making a decision to avoid this event from affecting its mission.
+
+---
 
 ### Cognition and Planning
 
