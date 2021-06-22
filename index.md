@@ -10,7 +10,7 @@ title: selin kayay
 ### [articles and (research?)](articles/)
 
 [GitHub](https://github.com/selin-k)
-[LinkedIn](www.linkedin.com/in/selinkayay)
+[LinkedIn](https://www.linkedin.com/in/selinkayay/)
 [Resume](/files-media/SELIN-CV.pdf)
 
 
