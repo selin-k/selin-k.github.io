@@ -63,4 +63,7 @@ flag                       meaning
 
 This editor indeed was heavily inspired by the `kilo` editor and that has been referenced in my documentation.
 
-[Documentation](documentation_final.pdf)
+
+<iframe src="documentation_final.pdf" width="100%" height="500px">
+    </iframe>
+
