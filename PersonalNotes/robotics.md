@@ -161,9 +161,17 @@ Local obstacle avoidance focuses on changing the robot’s trajectory as informe
   - Bug1 - aims to fully circle the oject then depart from the point that is the shortest distance to the goal.
   - Bug2 - follows object's contour but departs immdiately when it is able to move towards the goal. 
 
+
+
+---
 - note to self: disover answers to the localization questions above and see current industry solutions
 - discover path planning and object avoidance solutions and some currently used solutions too.
 
+
+ References:
+ [1](https://www.sciencedirect.com/science/article/pii/S1319157821000550)
+ [2](https://onlinelibrary.wiley.com/doi/full/10.1002/047134608X.W8318)
+ [3](https://en.wikipedia.org/wiki/Robot_navigation)
 
 
 
