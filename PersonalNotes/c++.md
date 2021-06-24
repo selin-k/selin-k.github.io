@@ -391,25 +391,249 @@ void f(Vector v, Vector& rv, Vector∗ pv)
 
 ## Classes in C++
 
-`Vector` as a class:
+### Creating classes
 
 ```c++
-class Vector {
-    public:
-        Vector(int s) :elem{new double[s]}, sz{s} { } // constr uct a Vector
-        double& operator[](int i) { return elem[i]; } // element access: subscripting
-        int size() { return sz; }
+class MyClass {
     private:
-        double∗ elem; // pointer to the elements
-        int sz; // the number of elements
+        int myNum;
+        string myString;
+
+    public:
+        void myMethod() {
+            cout << "Hello World!";
+        }
 };
 ```
 
+to-note:
+- access modifiers are defined like functions in python for some reason.
+- variables defined within the class like that are obviously attributes of `myClass`.
+
+>  By default, all members of a class are private if you don't specify an access specifier.
+
+### Instantiate classes and call object methods
+
+```c++
+// consider the class above
+
+int main() {
+    MyClass myObj;
+    myObj.myMethod(); // call public methods from instance of class as usual.
+    return 0;
+}
+```
+
+### More on Class Methods
+
+Methods can be defined within classes as seen above. They can also be defined outside of them -  think of this case like abstract class definitions in Java (not too similar since we don't extend the class to implement methods)? We simply declare a function within the class and implement it outside pf the class scope (not from another class that "extends" it though.)
+
+ie.
+
+```c++
+class MyClass {
+    public:
+        void myMethod(); // method declaration
+}
+
+// concrete implementation outside of class
+void MyClass::myMethod() {
+    cout << "Hello World!!\n";
+}
+
+int main() {
+    MyClass myObj;
+    myObj.myMethod(); //works
+    return 0;
+}
+
+```
+
+### C++ constructors
+
+Constructors are automatically called when an object is instantiated - sets initial states/values. Here is how it is defined in c++ syntax:
+
+```c++
+class MyClass {
+    public:
+        MyClass() {
+            // do something.
+        }
+}
+```
+J
+Here is a class example for Cars:
+
+```c++
+class Car {        // The class
+  public:          // Access specifier
+    string brand;  // Attribute
+    string model;  // Attribute
+    int year;      // Attribute
+    Car(string x, string y, int z) { // Constructor with parameters
+      brand = x;
+      model = y;
+      year = z;
+    }
+};
+```
+
+Just like functions, constructors can also be defined outside the class. First, declare the constructor inside the class, and then define it outside of the class by specifying the name of the class, followed by the scope resolution :: operator, followed by the name of the constructor (which is the same as the class):
+
+```c++
+class Car {        // The class
+  public:          // Access specifier
+    string brand;  // Attribute
+    string model;  // Attribute
+    int year;      // Attribute
+    Car(string x, string y, int z); // Constructor declaration
+};
+
+// Constructor definition outside the class
+Car::Car(string x, string y, int z) {
+  brand = x;
+  model = y;
+  year = z;
+}
+```
+
+### Encapsulation
+
+Getters and seters as usual to restrict access to private dtaa within class to a defined interface. Just define methods as shown above already.
+
+### Inheritance
+
+> To inherit from a class, use the : symbol.
+
+ie.
+
+```c++
+// Base class
+class Vehicle {
+  public:
+    string brand = "Ford";
+    void honk() {
+      cout << "Tuut, tuut! \n" ;
+    }
+};
+
+// Derived class
+class Car: public Vehicle {
+  public:
+    string model = "Mustang";
+};
+
+int main() {
+  Car myCar;
+  myCar.honk();
+  cout << myCar.brand + " " + myCar.model;
+  return 0;
+}
+```
+
+### Multilevel and Multiple Inheritance
+
+A class can also be derived from one class, which is already derived from another class. This is multilevel inheritance - not too interesting.
+
+Multiple inheritance is when a class can also be derived from more than one base class, using a comma-separated list:
+
+```c++
+// Base class
+class MyClass {
+  public:
+    void myFunction() {
+      cout << "Some content in parent class." ;
+    }
+};
+
+// Another base class
+class MyOtherClass {
+  public:
+    void myOtherFunction() {
+      cout << "Some content in another class." ;
+    }
+};
+
+// Derived class
+class MyChildClass: public MyClass, public MyOtherClass {
+};
+
+int main() {
+  MyChildClass myObj;
+  myObj.myFunction();
+  myObj.myOtherFunction();
+  return 0;
+}
+```
+
+- An instance of `MyChildClass` will have access to the attributes and methods of both the classes it inherits from.
+
+
+### Polymorphism
+
+Runtime/dynamic polymorphism happens when we inherit from classes and wish to override the behaviour of some inherited method - this way a mehtod can have many forms and the specific one is executed depending on the instance that calls it at runtime.
+
+Here is a classic animal sound example:
+
+```c++
+// Base class
+class Animal {
+  public:
+    void animalSound() {
+    cout << "The animal makes a sound \n" ;
+  }
+};
+
+// Derived class
+class Pig : public Animal {
+  public:
+    void animalSound() {
+    cout << "The pig says: wee wee \n" ;
+  }
+};
+
+// Derived class
+class Dog : public Animal {
+  public:
+    void animalSound() {
+    cout << "The dog says: bow wow \n" ;
+  }
+};
+```
+
+### Exercises
+
+`Vector`:
+
+```c++
+class Vector {
+    double* elem;
+    int sz;
+
+    public:
+        Vector(int s) {
+            elem = new double[s];
+            sz = s;
+        }
+
+        double& operator[](int i) {
+            return elem[i];
+        }
+
+        int size() {
+            return sz;
+        }
+};
+```
+
+Here is a better implementation to just read over to get more experience w src code:
 <!-- <script src="https://gist.github.com/guiqiqi/70859d2f810acd5e21b98cd23cb00b88.js"></script> -->
 <script src="https://gist.github.com/Donkrzawayan/af5fda0c1427b0f5252aa090c1c97b61.js"></script>
 
 
+## Files
 
+## Exceptions
 
 
 
