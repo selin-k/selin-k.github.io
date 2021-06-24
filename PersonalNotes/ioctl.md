@@ -5,7 +5,7 @@ title: ioctl and system calls
 
 ## What is `ioctl`?
 Conventional OSs divide virtual memory into two components: the userspace and the kernel. The userspace is the memory area where application software and some drivers execute while the kernel space is strictly reserved for OS kernel and most device drivers.
-[Seperation of userspace and kernel](https://en.wikipedia.org/wiki/User_space#:~:text=inter-process%20communication.-,Various,-layers%20within%20Linux)
+[Seperation of userspace and kernel](https://en.wikipedia.org/wiki/User_space#:~:text=User-,mode,-User%20applications)
 
 Userspace applications may make system calls to the kernel to communicate with external devices and make requests that it usually wouldn't have permission to run because the request may not be accessible on the user-level. System calls essentially provide an interface between processes and the Operating System.
 
