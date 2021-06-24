@@ -8,3 +8,4 @@ title: personal notes
 ## [mobile robotics notes](robotics.md)
 ## [c++ notes](c++.md)
 ## [ros](rostheory.md)
+## [ioctl](ioctl.md)
