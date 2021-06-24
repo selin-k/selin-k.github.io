@@ -9,3 +9,4 @@ title: personal notes
 ## [c++ notes](c++.md)
 ## [ros](rostheory.md)
 ## [ioctl](ioctl.md)
+## [bash scripting](bashscripting.md)
