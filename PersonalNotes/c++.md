@@ -728,6 +728,44 @@ Here is a better implementation to just read over to get more experience w src c
 <script src="https://gist.github.com/Donkrzawayan/af5fda0c1427b0f5252aa090c1c97b61.js"></script>
 
 
+# Generic programming/templates
+
+Writing Generic programs in C++ is called Templates.
+
+ie.
+```c++
+template <class T>
+class TempClass {
+  
+    T value;
+  
+public:
+    TempClass(T item)
+    {
+        value = item;
+    }
+  
+    T getValue()
+    {
+        return value;
+    }
+};
+
+int main()
+{
+    class TempClass<string>* String = 
+      new TempClass<string>("Generics vs Templates");
+  
+    cout << "Output Values: " << String->getValue() 
+         << "\n";
+  
+    class TempClass<int>* integer = new TempClass<int>(9);
+    cout << "Output Values: " << integer->getValue();
+}
+```
+
+
+
 ## Files
 
 ## Exceptions
