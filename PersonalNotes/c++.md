@@ -340,7 +340,7 @@ ie.
 struct Vector {
     int sz; // size of structure
     double * elem; // pointer to block of elements.
-}
+};
 ```
 
 Then, when constructing a `Vector`,  these properties must be provided:
@@ -388,6 +388,68 @@ void f(Vector v, Vector& rv, Vector∗ pv)
     int i4 = pv−>sz; // access through pointer
 }
 ```
+Basically struct is used to define a structure. But when we want to use it we have to use the struct keyword in C. If we use the typedef keyword, then a new name, we can use the struct by that name, without writing the struct keyword.
+
+In C++, there is no difference between 'struct' and 'typedef struct' because, in C++, all struct/union/enum/class declarations act like they are implicitly typedef'ed, as long as the name is not hidden by another declaration with the same name.
+
+We can make "instances" of a struct as so:
+```c++
+struct vector {
+    double* elem;
+    int sz;
+};
+
+vector v1;
+vector v2;
+vector v3;
+```
+
+But we can also do this:
+
+```c++
+struct vector {
+    double* elem;
+    int sz;
+} v1, v2, v3;
+```
+
+## Type aliases
+
+In C++, there are two syntaxes for creating such type aliases: The first, inherited from the C language, uses the typedef keyword:
+
+```c++
+typedef existing_type new_type_name ;
+```
+
+ie.
+
+```c++
+typedef char C;
+typedef unsigned int WORD;
+typedef char * pChar;
+typedef char field [50]; 
+
+C mychar, anotherchar, *ptc1;
+WORD myword;
+pChar ptc2;
+field name; 
+```
+
+More recently, a second syntax to define type aliases was introduced in the C++ language:
+
+```c++
+using new_type_name = existing_type ;
+```
+
+```c++
+using C = char;
+using WORD = unsigned int;
+using pChar = char *;
+using field = char [50]; 
+```
+
+Both aliases defined with typedef and aliases defined with using are semantically equivalent. The only difference being that typedef has certain limitations in the realm of templates that using has not. Therefore, using is more generic, although typedef has a longer history and is probably more common in existing code.
+
 
 ## Classes in C++
 
@@ -496,6 +558,41 @@ Car::Car(string x, string y, int z) {
   year = z;
 }
 ```
+
+Constructors can be overloaded:
+
+```c++
+// overloading class constructors
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+    int width, height;
+  public:
+    Rectangle ();
+    Rectangle (int,int);
+    int area (void) {return (width*height);}
+};
+
+Rectangle::Rectangle () {
+  width = 5;
+  height = 5;
+}
+
+Rectangle::Rectangle (int a, int b) {
+  width = a;
+  height = b;
+}
+
+int main () {
+  Rectangle rect (3,4);
+  Rectangle rectb;
+  cout << "rect area: " << rect.area() << endl;
+  cout << "rectb area: " << rectb.area() << endl;
+  return 0;
+}
+```
+
 
 ### Encapsulation
 
