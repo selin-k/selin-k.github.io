@@ -68,6 +68,6 @@ This editor indeed was heavily inspired by the `kilo` editor and that has been r
     </iframe>
     
     
-    
+Testing the editor:
 [![Testing the editor](https://github.com/selin-k/selin-k.github.io/blob/main/ProjectsAndCode/media/video.jpg?raw=true)](https://www.youtube.com/watch?v=-pAq43psZnk)
 
