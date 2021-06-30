@@ -112,7 +112,9 @@ if __name__ == "__main__":
 ---
 
 ### Services and actions
-...
+Since the publish/subscribe model allows for a one way communication where the subscriber can only recieve what the publisher decides to publish along its topics. Working with a distributed system, we might need a request/response kind of ineraction.
+
+We can define a service definition that contains two parts; one is for requests and the other is for responses. Using ROS Services, we can write a server node and client node. The server node provides the service under a name, and when the client node sends a request message to this server, it will respond and send the result to the client. The client might need to wait until the server responds. The ROS service interaction is like a remote procedure call.
 
 3. ROS Community Level
 The ROS Community Level concepts are ROS resources that enable separate communities to exchange software and knowledge. These resources include distributions, repos, ROS wiki and discussion boards etc.
