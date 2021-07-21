@@ -11,4 +11,4 @@ layout: default
 ## [cs141 - functional programming](141.md)
 ## [cs133 - lab diary](https://www.dcs.warwick.ac.uk/~u2006384/cs133/)
 
-Credit to (CSRG)[https://warwick.guide/] for most of the notes.
+Credit to [CSRG](https://warwick.guide/) for most of the notes.
