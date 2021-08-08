@@ -119,9 +119,14 @@ We can define a service definition that contains two parts; one is for requests 
 3. ROS Community Level
 The ROS Community Level concepts are ROS resources that enable separate communities to exchange software and knowledge. These resources include distributions, repos, ROS wiki and discussion boards etc.
 
-## Graph Resource Names
 
-[clicc here](http://wiki.ros.org/ROS/Concepts#:~:text=Names-,Graph%20Resource%20Names,-Graph%20Resource%20Names)
+## Use cases of ROS
+ROS is good for research and development in a static environment. This refers to putting together a robot with multiple components like visualization, perception, cognition etc. and being able to interface with the robot/communicate with it etc. However when it comes to production and development of a product to operate oin a dynamic environment ROS has shortcomings thta mus tbe mitigates by building on top of the framework.
+
+
+## Graph Resource Names and Cheatsheet
+
+- [Graph Resource Names](http://wiki.ros.org/ROS/Concepts#:~:text=Names-,Graph%20Resource%20Names,-Graph%20Resource%20Names)
 
 
 ---
@@ -130,7 +135,6 @@ The ROS Community Level concepts are ROS resources that enable separate communit
 
 A ROS distribution is a versioned set of ROS packages. These are akin to Linux distributions (e.g. Ubuntu). The purpose of the ROS distributions is to let developers work against a relatively stable codebase until they are ready to roll everything forward. Therefore once a distribution is released, we try to limit changes to bug fixes and non-breaking improvements for the core packages (every thing under ros-desktop-full). And generally that applies to the whole community, but for "higher" level packages, the rules are less strict, and so it falls to the maintainers of a given package to avoid breaking changes.
 
-- We're using melodic?? why not noetic?
 
 [Distributions page](http://wiki.ros.org/Distributions)
 
