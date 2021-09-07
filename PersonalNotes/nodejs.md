@@ -49,9 +49,16 @@ An HTML button was clicked
 With the HTML [DOM](https://www.w3schools.com/js/js_htmldom.asp), JavaScript can access and change all the elements of an HTML document.
 
 
-### Web APIs
+### Web APIs and Webhooks
 
 All browsers have a set of [built-in Web APIs](https://www.w3schools.com/js/js_validation_api.asp) to support complex operations, and to help accessing data.
+  
+Webhooks are one of a few ways web applications can communicate with each other. It allows you to send real-time data from one application to another whenever a given event occurs.
+This is almost like: If <event>, Then send data. This exchange of data happens over the web through a “webhook URL.”
+A webhook URL is provided by the receiving application, and acts as a phone number that the other application can call when an event happens.
+A webhook allows the provider to send (i.e “push”) data to your application as soon as an event occurs. This is why webhooks are sometimes referred to as “reverse APIs.”
+  
+Despite how popular and important webhooks are, some applications don’t support them. In these cases, middleware applications like Zapier, IFTTT and Automate.io have built out integrations that “poll” APIs and send updates via webhooks. They can help you connect apps that don’t have webhook integrations and allow them to share data with one another.
 
 ### AJAX 
 
