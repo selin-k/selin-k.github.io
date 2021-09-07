@@ -139,3 +139,12 @@ A ROS distribution is a versioned set of ROS packages. These are akin to Linux d
 [Distributions page](http://wiki.ros.org/Distributions)
 
 
+## ROS tools/packages
+
+- ROS uses a "build system" called catkin - catkin combines CMake macros and Python scripts to provide some functionality on top of CMake's normal workflow. A build system is a set of programs and companion text files that collectively build a software code base. Building includes compiling, linking, and packaging source code into executable form.
+
+- rviz is a 3D visualization tool for ROS
+
+
+[ROS Advantages and Disadvantages](https://drive.google.com/file/d/1v8ZUYb_weH7LD_PZr8zO3PUywFLTRsNa/view?usp=sharing)
+
