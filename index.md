@@ -11,7 +11,7 @@ title: selin kayay
 
 [GitHub](https://github.com/selin-k)
 [LinkedIn](https://www.linkedin.com/in/selinkayay/)
-[Resume](/files-media/SELIN-CV.pdf)
+[Resume](/files-media/CV.pdf)
 
 
 
