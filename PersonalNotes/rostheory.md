@@ -146,5 +146,4 @@ A ROS distribution is a versioned set of ROS packages. These are akin to Linux d
 - rviz is a 3D visualization tool for ROS
 
 
-[ROS Advantages and Disadvantages](https://drive.google.com/file/d/1v8ZUYb_weH7LD_PZr8zO3PUywFLTRsNa/view?usp=sharing)
 
